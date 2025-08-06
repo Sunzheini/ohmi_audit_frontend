@@ -1,26 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
+
+function TitleElement() {
+    return <h1 className="Title">Hello World</h1>;
+}
+
+
+function TextElement({text}) {
+    return <p className="Text">{text}</p>;
+}
+
+
+function InputElement({value, onChange}) {
+    return <input className="Input" type="text" value={value} onChange={onChange}/>;
+}
+
+
+function ButtonElement({onClick}) {
+    return <button className="Button" onClick={onClick}>Click Me!</button>;
+}
 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [text, setText] = useState("This is the initial text.");
+    const [inputText, setInputText] = useState("");
+
+    return (
+            <>
+                <TitleElement/>
+                <TextElement text={text}/>
+                <InputElement
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}/>
+                <ButtonElement onClick={() => {
+                    setText(inputText)
+                    setInputText("");
+                }}/>
+            </>
+    );
 }
 
 export default App;
