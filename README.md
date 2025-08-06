@@ -1,6 +1,19 @@
 # ohmi_audit_frontend
 
 
+continue with: https://www.youtube.com/watch?v=SqcY0GlETPk&t=1741s&ab_channel=ProgrammingwithMosh
+https://leetcode.com/problems/two-sum/description/
+https://customtkinter.tomschimansky.com/
+https://getbootstrap.com/
+https://mui.com/
+
+take stuff from vm_server_react
+
+do the same elements like in the backend
+
+
+
+
 1. Components are js functions that return jsx (html in js). References like <Sample/>.
 2. JSX: <button class="btn">Click Me</button> -> <button className="btn">Click Me</button>.
 3. Curly braces {} are used to write js code in jsx, i.e. <h1>{var}</h1> or <img src={logo}/>.
