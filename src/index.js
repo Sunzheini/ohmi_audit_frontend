@@ -1,6 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+// import css here, last takes precedence
+import './styles/reset.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Bootstrap CSS
+import './styles/style.css';
+
+import './styles/components/buttons.css';
+import './styles/components/card-buttons-bar.css';
+import './styles/components/content_container.css';
+import './styles/components/footer.css';
+import './styles/components/forms.css';
+import './styles/components/left_menu_bar.css';
+import './styles/components/navigation_bar.css';
+import './styles/components/task_status.css';
+import './styles/components/tables.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -11,7 +26,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

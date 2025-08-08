@@ -2,16 +2,8 @@
 
 
 continue with: https://www.youtube.com/watch?v=SqcY0GlETPk&t=1741s&ab_channel=ProgrammingwithMosh
-https://leetcode.com/problems/two-sum/description/
-https://customtkinter.tomschimansky.com/
-https://getbootstrap.com/
-https://mui.com/
-
 take stuff from vm_server_react
-
 do the same elements like in the backend
-
-
 
 
 1. Components are js functions that return jsx (html in js). References like <Sample/>.
@@ -47,3 +39,9 @@ context with `const AppContext = createContext()`, wrap the parent component wit
 is fetching data with `Suspense`.
 16. Error boundaries: To catch errors in a component and display a fallback UI, use
 `<ErrorBoundary FallbackComponent={ErrorFallback}> <Component/> </ErrorBoundary>`.
+
+
+[//]: # (Bootstrap)
+npm install bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css' in IndexPage.jsx
+

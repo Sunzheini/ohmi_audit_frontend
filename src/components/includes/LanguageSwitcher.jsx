@@ -27,3 +27,5 @@ function LanguageSwitcher() {
             </>
     )
 }
+
+export default LanguageSwitcher;

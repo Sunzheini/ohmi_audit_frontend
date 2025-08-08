@@ -1,7 +1,7 @@
 function ContentContainer(props) {
-    let data_for_content_container_wrapper_top = props.data_for_content_container_wrapper_top || [];
-    let data_for_content_container_wrapper_bottom = props.data_for_content_container_wrapper_bottom || [];
-    let message = props.message || '';
+    // let data_for_content_container_wrapper_top = props.data_for_content_container_wrapper_top || [];
+    // let data_for_content_container_wrapper_bottom = props.data_for_content_container_wrapper_bottom || [];
+    // let message = props.message || '';
 
     return (
             <>
@@ -131,3 +131,5 @@ function ContentContainer(props) {
 </>
 )
 }
+
+export default ContentContainer;
