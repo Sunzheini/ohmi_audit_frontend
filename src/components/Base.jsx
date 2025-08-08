@@ -1,9 +1,19 @@
+import React from 'react';
 import NavigationBar from './includes/NavigationBar';
 import MainPageText from "./includes/MainPageText";
 import LeftMenuBar from "./includes/LeftMenuBar";
 import Footer from "./includes/Footer";
 
-function Base({page_title, right_bar_container = null}) {
+function Base({
+                  page_title,
+                  page_name,
+                  navigation_bar = <NavigationBar/>,
+                  main_page_text = <MainPageText page_name={page_name} />,
+                  left_menu_bar = <LeftMenuBar/>,
+                  right_bar_container = null,
+                  footer = <Footer/>
+              })
+{
     return (
             <html lang="en">
                 <head>
@@ -11,6 +21,7 @@ function Base({page_title, right_bar_container = null}) {
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+                    {/*1. Page Title (On the explorer tab)*/}
                     <title>{page_title || "Base"}</title>
                 </head>
 
@@ -18,12 +29,12 @@ function Base({page_title, right_bar_container = null}) {
                     <header className="header">
                         {/*4. Navigation*/}
                         <div className="navigation-container">
-                            <NavigationBar/>
+                            {navigation_bar}
                         </div>
 
                         {/*5. Main Page Text*/}
                         <div className="main-page-text-container">
-                            <MainPageText/>
+                            {main_page_text}
                         </div>
                     </header>
 
@@ -33,7 +44,7 @@ function Base({page_title, right_bar_container = null}) {
 
                             {/*7. Left Bar*/}
                             <div className="left-bar-container">
-                                <LeftMenuBar/>
+                                {left_menu_bar}
                             </div>
 
                             {/*8. Right Bar*/}
@@ -45,7 +56,7 @@ function Base({page_title, right_bar_container = null}) {
 
                     {/*8. Footer*/}
                     <div className="footer-container">
-                        <Footer/>
+                        {footer}
                     </div>
                 </body>
             </html>

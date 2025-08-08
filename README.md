@@ -1,11 +1,19 @@
 # ohmi_audit_frontend
 
+## Dependencies
+located in package.json
+1. delete the node_modules folder
+2. delete package-lock.json file
+3. npm cache clean --force
+4. run `npm install` to install the dependencies again
+
 
 continue with: https://www.youtube.com/watch?v=SqcY0GlETPk&t=1741s&ab_channel=ProgrammingwithMosh
 take stuff from vm_server_react
 do the same elements like in the backend
 
 
+## Info
 1. Components are js functions that return jsx (html in js). References like <Sample/>.
 2. JSX: <button class="btn">Click Me</button> -> <button className="btn">Click Me</button>.
 3. Curly braces {} are used to write js code in jsx, i.e. <h1>{var}</h1> or <img src={logo}/>.
@@ -41,7 +49,6 @@ is fetching data with `Suspense`.
 `<ErrorBoundary FallbackComponent={ErrorFallback}> <Component/> </ErrorBoundary>`.
 
 
-[//]: # (Bootstrap)
+## Bootstrap
 npm install bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css' in IndexPage.jsx
-

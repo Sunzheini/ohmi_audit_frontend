@@ -1,31 +1,39 @@
-function LanguageSwitcher() {
-    return (
-            <>
-                {/*<div className="lang">*/}
-                {/*    <form id="language-form" action="{% url 'set_language' %}" method="post">*/}
-                {/*        {% csrf_token %}*/}
-                {/*        <input name="next" type="hidden" value="{{ request.get_full_path }}"/>*/}
-                {/*        <label>*/}
-                {/*            <select name="language" id="language-selector">*/}
-                {/*                {% get_current_language as current_lang %}*/}
-                {/*                {% get_available_languages as LANGUAGES %}*/}
-                {/*                {% for code, name in LANGUAGES %}*/}
-                {/*                <option value="{{ code }}" {% if code == current_lang %} selected{% endif %}>*/}
-                {/*                    {{name}} ({{code}})*/}
-                {/*                </option>*/}
-                {/*                {% endfor %}*/}
-                {/*            </select>*/}
-                {/*        </label>*/}
-                {/*    </form>*/}
-                {/*</div>*/}
+import React from 'react';
+import {useTranslation, i18n} from 'react-i18next';
 
-                {/*<script>*/}
-                {/*    document.getElementById('language-selector').addEventListener('change', function() {*/}
-                {/*    document.getElementById('language-form').submit();*/}
-                {/*});*/}
-                {/*</script>*/}
-            </>
-    )
+function LanguageSwitcher() {
+    const {t, i18n} = useTranslation();
+    const currentLanguage = i18n.language;
+
+    const languages = [
+        {code: 'en', name: 'English'},
+        {code: 'bg', name: 'Bulgarian'},
+        // Add more languages as needed
+    ];
+
+    const changeLanguage = (e) => {
+        const newLanguage = e.target.value;
+        i18n.changeLanguage(newLanguage);
+        // Optional: Save preference to localStorage
+        localStorage.setItem('i18nextLng', newLanguage);
+    };
+
+    return (
+            <div className="lang">
+                <select
+                        id="language-selector"
+                        value={currentLanguage}
+                        onChange={changeLanguage}
+                        className="language-dropdown"
+                >
+                    {languages.map((lang) => (
+                            <option key={lang.code} value={lang.code}>
+                                {lang.name} ({lang.code})
+                            </option>
+                    ))}
+                </select>
+            </div>
+    );
 }
 
 export default LanguageSwitcher;
