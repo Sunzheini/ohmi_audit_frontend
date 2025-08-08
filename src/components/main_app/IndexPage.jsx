@@ -7,7 +7,8 @@ function IndexPage({
                        page_title,
                        page_name,
                        data_for_content_container_wrapper_top,
-                       data_for_content_container_wrapper_bottom
+                       data_for_content_container_wrapper_bottom,
+                       message
                    }) {
     return (
             <Base
@@ -21,7 +22,11 @@ function IndexPage({
                             </div>
 
                             <div className="content-container">
-                                <ContentContainer/>
+                                <ContentContainer
+                                    data_for_content_container_wrapper_top={data_for_content_container_wrapper_top}
+                                    data_for_content_container_wrapper_bottom={data_for_content_container_wrapper_bottom}
+                                    message={message}
+                                />
                             </div>
                         </div>}
             />

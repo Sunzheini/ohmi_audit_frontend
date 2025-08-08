@@ -11,6 +11,7 @@ function App() {
                     page_name="Index Page"
                     data_for_content_container_wrapper_top={1}
                     data_for_content_container_wrapper_bottom={2}
+                    message={"123123"}
                 />
             </>
     );

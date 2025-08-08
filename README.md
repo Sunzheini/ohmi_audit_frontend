@@ -9,8 +9,9 @@ located in package.json
 
 
 continue with: https://www.youtube.com/watch?v=SqcY0GlETPk&t=1741s&ab_channel=ProgrammingwithMosh
+do the same elements like in the backend (continue with ContentContainer)
 take stuff from vm_server_react
-do the same elements like in the backend
+
 
 
 ## Info
