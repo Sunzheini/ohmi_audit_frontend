@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // import css here, last takes precedence
 import './styles/reset.css';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Bootstrap CSS
+// import 'bootstrap/dist/css/bootstrap.min.css';  // Bootstrap CSS
 import './styles/style.css';
 
 import './styles/components/buttons.css';
