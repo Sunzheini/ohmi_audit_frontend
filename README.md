@@ -39,6 +39,7 @@ in a child component.
 it will run after every render if the values in the array change.
 13. useRef hook: To reference a dom element, use `const inputRef = useRef()`, and use it with
 `<input ref={inputRef}/>`.
+
 14. Context: To pass data to lower level components without passing it through props, create the
 context with `const AppContext = createContext()`, wrap the parent component with
 `<AppContext.Provider> <App/> </AppContext.Provider>`, put the data in the provider with

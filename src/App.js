@@ -1,6 +1,7 @@
 import IndexPage from "./components/main_app/IndexPage";
 import AuditForm from "./components/forms/AuditForm";
 import handleSubmit from "./helper_functions/HandleSubmit";
+import dummyAuditsData from "./helper_functions/DummyAuditsData";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
                     page_name="Index Page"
                     // data_for_content_container_wrapper_top={<AuditForm onSubmit={handleSubmit}/>}      // i.e. Audit form
                     data_for_content_container_wrapper_top={<AuditForm handleSubmit={handleSubmit}/> }       // i.e. Audit form
-                    data_for_content_container_wrapper_bottom={[1, 2, 3]}   // Audit list table
+                    data_for_content_container_wrapper_bottom={dummyAuditsData}   // Audit list table
                     message={"123123"}
                 />
             </>
