@@ -8,13 +8,6 @@ located in package.json
 4. run `npm install` to install the dependencies again
 
 
-continue with: https://www.youtube.com/watch?v=SqcY0GlETPk&t=1741s&ab_channel=ProgrammingwithMosh
-take stuff from vm_server_react / get the info from the backend incl forms
-Finish ContentContainer
-finalize to look the same as in the backend (continue with ContentContainer)
-
-
-
 ## Info
 1. Components are js functions that return jsx (html in js). References like <Sample/>.
 2. JSX: <button class="btn">Click Me</button> -> <button className="btn">Click Me</button>.
@@ -39,7 +32,6 @@ in a child component.
 it will run after every render if the values in the array change.
 13. useRef hook: To reference a dom element, use `const inputRef = useRef()`, and use it with
 `<input ref={inputRef}/>`.
-
 14. Context: To pass data to lower level components without passing it through props, create the
 context with `const AppContext = createContext()`, wrap the parent component with
 `<AppContext.Provider> <App/> </AppContext.Provider>`, put the data in the provider with

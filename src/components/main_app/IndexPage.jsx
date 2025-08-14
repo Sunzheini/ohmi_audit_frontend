@@ -2,14 +2,20 @@ import React from 'react';
 import Base from "../Base";
 import CardButtonsBar from "../includes/CardButtonsBar";
 import ContentContainer from "../includes/ContentContainer";
+import {useAuth} from "../../context/AuthContext";
 
 function IndexPage({
                        page_title,
                        page_name,
                        data_for_content_container_wrapper_top,
                        data_for_content_container_wrapper_bottom,
-                       message
+                       message,
                    }) {
+
+    // Authentication context
+        const { isAuthenticated, login } = useAuth();
+    console.log("Authentication status:", isAuthenticated);
+
     return (
             <Base
                     page_title={page_title}

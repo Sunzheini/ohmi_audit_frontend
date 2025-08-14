@@ -2,9 +2,13 @@ import IndexPage from "./components/main_app/IndexPage";
 import AuditForm from "./components/forms/AuditForm";
 import handleSubmit from "./helper_functions/HandleSubmit";
 import dummyAuditsData from "./helper_functions/DummyAuditsData";
+import {useAuth} from "./context/AuthContext";
 
 
 function App() {
+    // Authentication context
+    const { isAuthenticated, login } = useAuth();
+
     return (
             <>
                 <IndexPage

@@ -3,6 +3,7 @@ import NavigationBar from './includes/NavigationBar';
 import MainPageText from "./includes/MainPageText";
 import LeftMenuBar from "./includes/LeftMenuBar";
 import Footer from "./includes/Footer";
+import {useAuth} from "../context/AuthContext";
 
 function Base({
                   page_title,
